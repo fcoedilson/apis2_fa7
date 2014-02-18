@@ -9,7 +9,7 @@ public class CompraVeiculo {
 		v = new TravaEletrica(v);
 		v = new DirecaoHidraulica(v);
 		
-		System.out.println("O valor do seu veículo é " + v.custo());
+		System.out.println("O valor do veículo Palio é " + v.custo());
 	}
 
 }
