@@ -1,3 +1,5 @@
 /abstractFactory
 /decorator
 /singleton
+/adapter
+/state
