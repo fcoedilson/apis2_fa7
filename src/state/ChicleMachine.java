@@ -16,8 +16,8 @@ public class ChicleMachine {
 		comMoeda = new ComMoeda(this); 
 		semChiclete = new SemChiclete(this); 
 		chicleteVendido = new ChicleteVendido(this); 
-
-		this.numChicletes = numChicletes; 
+		this.numChicletes = numChicletes;
+		//this.numChicletes = numChicletes; 
 		if (numChicletes > 0) 
 			estadoAtual = semMoeda; 
 		else 
@@ -26,7 +26,10 @@ public class ChicleMachine {
 
 
 	public void inserirMoeda() { 
-		estadoAtual.inserirMoeda(); 
+		if (numChicletes > 0) {
+		    estadoAtual.inserirMoeda(); }
+		else 
+			estadoAtual = semChiclete;
 	} 
 
 	public void devolverMoeda() { 
@@ -41,6 +44,8 @@ public class ChicleMachine {
 	public void entregarChiclete() { 
 		if (numChicletes > 0) 
 			numChicletes = numChicletes -1; 
+		else 
+			estadoAtual = semChiclete;
 	}
 
 
