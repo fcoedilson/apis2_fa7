@@ -1,2 +1,5 @@
-/iterator
+/adapter
 /command
+/decorator
+/factory
+/iterator
